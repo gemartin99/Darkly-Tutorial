@@ -70,7 +70,28 @@ Ejemplo básico muy parecido al que veremos nosotros, empezar a ver desde min 4:
 
 ### Ejemplo 🔧👨‍💻
 
-⚠️ Antes de ir con el ejemplo + solución. Si no sabes mucho sobre tecnicas de hacking web te recomiendo antes de ver como resolverlo leer atentantemente el resto de apartados y mirar los videos educacionales que te dejo y de esta manera intentar resolverlo por tu cuenta, aprenderás mucho más! ⚠️
+1. El primer paso que haremos sera abrir el codigo fuente de la pagina web y examinarlo en busca de formularios ```<form>``` ya que suelen ser lugares comunes donde se encuentran campos ocultos que podrían ser manipulables.
+
+   ![image](https://github.com/gemartin99/Darkly-Tutorial/assets/66915274/3c6205fe-4d52-4aa9-b678-11a39a54f39f)
+
+2. Navegando por la pagina hemos encontrado algunos formularios pero en los campos ocultos no aparece nada de valor. Hasta que nos topamos con el apartado ```Recover password```.
+   
+   ![image](https://github.com/gemartin99/Darkly-Tutorial/assets/66915274/bfeb403e-42fa-45bc-89ca-0fe601d6209b)
+
+3. Si abrimos el codigo fuente podemos observar como hay un campo oculto con un valor de un correo electronico.
+   
+   ![image](https://github.com/gemartin99/Darkly-Tutorial/assets/66915274/477d6db6-1610-4173-bdb1-e1ce8c2db81e)
+   
+4. Sabiendo esto lo que haremos a continuacion sera sustituir dicho valor desde ```inspect``` para que de esta manera en vez de llegar la recuperación de contraseña al correo por defecto nos llegue al correo que nosotros especifiquemos.
+
+  ![image](https://github.com/gemartin99/Darkly-Tutorial/assets/66915274/69cc60e7-7e9c-4d95-a878-6a753c41a680)
+
+5. Una vez lo hayamos modificado le haremos click al boton de ```submit``` y ya nos dara la flag del ejercicio.
+
+   ![image](https://github.com/gemartin99/Darkly-Tutorial/assets/66915274/e36e0eee-f7f4-4777-8fbb-dd01df808c80)
+
+
+
 
 ### Prevención 🔒🛡️
 
