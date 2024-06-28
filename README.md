@@ -4,7 +4,11 @@ Si tu idea es entrar a este repo para sacar las flags estas muy equivocado!
 
 # Indice
 
-Ya lo haré
+1.[Path/Directory traversal  📂🔓](#1---pathdirectory-traversal--)
+
+2.[Hidden input 🕵️‍♂️🔍](#2---hidden-input-%EF%B8%8F%EF%B8%8F)
+
+3.[Redirections 🔄🔀](#3---redirections-)
 
 ## 1 - Path/Directory traversal  📂🔓
 
