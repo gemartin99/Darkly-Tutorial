@@ -4,11 +4,13 @@ Si tu idea es entrar a este repo para sacar las flags estas muy equivocado!
 
 # Indice
 
-1.[Path/Directory traversal  📂🔓](#1---pathdirectory-traversal--)
+1. [Path/Directory traversal  📂🔓](#1---pathdirectory-traversal--)
 
-2.[Hidden input 🕵️‍♂️🔍](#2---hidden-input-%EF%B8%8F%EF%B8%8F)
+2. [Hidden input 🕵️‍♂️🔍](#2---hidden-input-%EF%B8%8F%EF%B8%8F)
 
-3.[Redirections 🔄🔀](#3---redirections-)
+3. [Redirections 🔄🔀](#3---redirections-)
+
+4. [Survey 📊✅] 
 
 ## 1 - Path/Directory traversal  📂🔓
 
@@ -112,3 +114,17 @@ Verificar que todos los datos recibidos, incluidos los provenientes de campos oc
 ### Ejemplo 🔧👨‍💻
 
 ### Prevención 🔒🛡️
+
+### 4 - Survey 📊✅
+
+### Descripción de la vulnerabilidad 💡🔍
+
+### Riesgos asociados ⚠️💥
+
+### Videos educacionales sobre la vulnerabilidad 🎥
+
+### Ejemplo 🔧👨‍💻
+
+### Prevención 🔒🛡️
+
+### 5 - Cookie Injection 🍪💉
