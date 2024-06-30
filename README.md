@@ -12,7 +12,7 @@ Si tu idea es entrar a este repo para sacar las flags estas muy equivocado!
 
 4. [Survey 📊✅](#4---survey-)
 
-5. [Cookie Injection 🍪💉](#5---cookie-injection-)
+5. [Cookie Tampering 🍪🛠️](#5---cookie-tampering-)
    
 6. [Stored XSS 💬⚠️](#6---stored-xss--%EF%B8%8F)
 
@@ -147,53 +147,79 @@ Verificar que todos los datos recibidos, incluidos los provenientes de campos oc
 
 ### Prevención 🔒🛡️
 
-### 5 - Cookie Injection 🍪💉
+### 5 - Cookie tampering 🍪🛠️
 
 ### Descripción de la vulnerabilidad 💡🔍
 
+El atacante aprovecha la capacidad de modificar el contenido de las cookies desde el lado del cliente, usualmente mediante herramientas como la consola del navegador, para alterar su valor y engañar al servidor haciéndole creer que tiene ciertos privilegios o estado de autenticación.
+
 ### Riesgos asociados ⚠️💥
 
+Suplantación de identidad y por lo tanto acceso no autorizado a recursos.
+
 ### Videos educacionales sobre la vulnerabilidad 🎥
+
+https://www.youtube.com/watch?v=fbZpsHMgNdk&t=402s
 
 ### Ejemplo 🔧👨‍💻
 
 ### Prevención 🔒🛡️
+
+Tener firmado y cifrado de cookies, monitoreo para detectar cualquier actividad sospechosa, una validación y autenticación adecuada.
 
 ### 6 - Stored XSS  💬⚠️
 
 ### Descripción de la vulnerabilidad 💡🔍
 
+Permite a un atacante ejecutar scripts maliciosos en el navegador de otros usuarios. Ocurre cuando los datos enviados por un usuario a través de formularios o mensajes se guardan en la base de datos sin sanitizar adecuadamente, y luego se muestran a otros usuarios en alguna parte de la aplicación.
+
 ### Riesgos asociados ⚠️💥
+
+Ejecución de código malicioso, robo de cookies, redirección a sitios maliciosos.
 
 ### Videos educacionales sobre la vulnerabilidad 🎥
 
 ### Ejemplo 🔧👨‍💻
 
 ### Prevención 🔒🛡️
+
+Validar y sanitizar todos los datos de entrada para eliminar o escapar cualquier contenido malicioso y codificar adecuadamente todos los datos antes de mostrarlos en la interfaz de usuario
 
 ### 7 - Scrapping 🤖🕵️‍♂️
 
 ### Descripción de la vulnerabilidad 💡🔍
 
+El web scraping es la práctica de extraer información de sitios web de manera automatizada. Si la aplicamos al ejemplo que nos da esta maquina veremos que tendremos que hacer una búsqueda exhaustiva a través de directorios y archivos para buscar la flag en uno de ellos.
+
 ### Riesgos asociados ⚠️💥
+
+Exposición de información sensible y carga no intencionada del servidor.
 
 ### Videos educacionales sobre la vulnerabilidad 🎥
 
 ### Ejemplo 🔧👨‍💻
 
 ### Prevención 🔒🛡️
+
+Utilizar técnicas como CAPTCHA, límites de tasa y protecciones basadas en IP.
 
 ### 8 - HTTP Header Manipulation 🐦🕵️‍♂️
 
 ### Descripción de la vulnerabilidad 💡🔍
 
+Ocurre cuando un atacante modifica o interfiere con los encabezados HTTP de una solicitud o respuesta
+
 ### Riesgos asociados ⚠️💥
+
+Falsificación de identidad y exposición de información sensible
 
 ### Videos educacionales sobre la vulnerabilidad 🎥
 
 ### Ejemplo 🔧👨‍💻
 
 ### Prevención 🔒🛡️
+
+Validación y sanitización de encabezados. Utilizar conexiones seguras HTTPS que van cifradas.
 
 ### 9 - SQL Injection Images 📸💉
 
