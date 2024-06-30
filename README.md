@@ -10,27 +10,27 @@ Si tu idea es entrar a este repo para sacar las flags estas muy equivocado!
 
 3. [Redirections 🔄🔀](#3---redirections-)
 
-4. [Survey 📊✅]
+4. [Survey 📊✅](#4---survey-)
 
-5. [Cookie Injection 🍪💉]
+5. [Cookie Injection 🍪💉](#5---cookie-injection-)
    
-6. [Stored XSS 💬⚠️]
+6. [Stored XSS 💬⚠️](#6---stored-xss--%EF%B8%8F)
 
-7. [Scrapping 🤖🕵️‍♂️]
+7. [Scrapping 🤖🕵️‍♂️](#7---scrapping-%EF%B8%8F%EF%B8%8F)
 
-8. [HTTP Header Manipulation 🐦🕵️‍♂️]
+8. [HTTP Header Manipulation 🐦🕵️‍♂️](#8---http-header-manipulation-%EF%B8%8F%EF%B8%8F)
 
-9. [SQL Injection Images 📸💉]
+9. [SQL Injection Images 📸💉](#9---sql-injection-images-)
 
-10. [SQL Injection Images 👥💉]
+10. [SQL Injection Images 👥💉](#10---sql-injection-members-)
 
-11 [Bruteforce 🔐⚔️]
+11. [Bruteforce 🔐⚔️](#11---bruteforce-%EF%B8%8F)
 
-12 [Robots 🤖👮‍♂️]
+12. [Robots 🤖👮‍♂️](#12---robots-admin-%EF%B8%8F)
 
-13. [Data URI Injection 📄🔍]
+13. [Data URI Injection 📄🔍](#13---data-uri-injection-)
 
-14. [File Upload Injection 📤📄 ]
+14. [File Upload Injection 📤📄 ](#14---file-upload-injection-)
 
 ## 1 - Path/Directory traversal  📂🔓
 
