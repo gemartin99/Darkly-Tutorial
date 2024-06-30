@@ -10,7 +10,27 @@ Si tu idea es entrar a este repo para sacar las flags estas muy equivocado!
 
 3. [Redirections 🔄🔀](#3---redirections-)
 
-4. [Survey 📊✅] 
+4. [Survey 📊✅]
+
+5. [Cookie Injection 🍪💉]
+   
+6. [Stored XSS 💬⚠️]
+
+7. [Scrapping 🤖🕵️‍♂️]
+
+8. [HTTP Header Manipulation 🐦🕵️‍♂️]
+
+9. [SQL Injection Images 📸💉]
+
+10. [SQL Injection Images 👥💉]
+
+11 [Bruteforce 🔐⚔️]
+
+12 [Robots 🤖👮‍♂️]
+
+13. [Data URI Injection 📄🔍]
+
+14. [File Upload Injection 📤📄 ]
 
 ## 1 - Path/Directory traversal  📂🔓
 
@@ -128,3 +148,122 @@ Verificar que todos los datos recibidos, incluidos los provenientes de campos oc
 ### Prevención 🔒🛡️
 
 ### 5 - Cookie Injection 🍪💉
+
+### Descripción de la vulnerabilidad 💡🔍
+
+### Riesgos asociados ⚠️💥
+
+### Videos educacionales sobre la vulnerabilidad 🎥
+
+### Ejemplo 🔧👨‍💻
+
+### Prevención 🔒🛡️
+
+### 6 - Stored XSS  💬⚠️
+
+### Descripción de la vulnerabilidad 💡🔍
+
+### Riesgos asociados ⚠️💥
+
+### Videos educacionales sobre la vulnerabilidad 🎥
+
+### Ejemplo 🔧👨‍💻
+
+### Prevención 🔒🛡️
+
+### 7 - Scrapping 🤖🕵️‍♂️
+
+### Descripción de la vulnerabilidad 💡🔍
+
+### Riesgos asociados ⚠️💥
+
+### Videos educacionales sobre la vulnerabilidad 🎥
+
+### Ejemplo 🔧👨‍💻
+
+### Prevención 🔒🛡️
+
+### 8 - HTTP Header Manipulation 🐦🕵️‍♂️
+
+### Descripción de la vulnerabilidad 💡🔍
+
+### Riesgos asociados ⚠️💥
+
+### Videos educacionales sobre la vulnerabilidad 🎥
+
+### Ejemplo 🔧👨‍💻
+
+### Prevención 🔒🛡️
+
+### 9 - SQL Injection Images 📸💉
+
+### Descripción de la vulnerabilidad 💡🔍
+
+### Riesgos asociados ⚠️💥
+
+### Videos educacionales sobre la vulnerabilidad 🎥
+
+### Ejemplo 🔧👨‍💻
+
+### Prevención 🔒🛡️
+
+### 10 - SQL Injection Members 👥💉
+
+### Descripción de la vulnerabilidad 💡🔍
+
+### Riesgos asociados ⚠️💥
+
+### Videos educacionales sobre la vulnerabilidad 🎥
+
+### Ejemplo 🔧👨‍💻
+
+### Prevención 🔒🛡️
+
+### 11 - Bruteforce 🔐⚔️
+
+### Descripción de la vulnerabilidad 💡🔍
+
+### Riesgos asociados ⚠️💥
+
+### Videos educacionales sobre la vulnerabilidad 🎥
+
+### Ejemplo 🔧👨‍💻
+
+### Prevención 🔒🛡️
+
+### 12 - Robots Admin 🤖👮‍♂️
+
+### Descripción de la vulnerabilidad 💡🔍
+
+### Riesgos asociados ⚠️💥
+
+### Videos educacionales sobre la vulnerabilidad 🎥
+
+### Ejemplo 🔧👨‍💻
+
+### Prevención 🔒🛡️
+
+### 13 - Data URI Injection 📄🔍
+
+### Descripción de la vulnerabilidad 💡🔍
+
+### Riesgos asociados ⚠️💥
+
+### Videos educacionales sobre la vulnerabilidad 🎥
+
+### Ejemplo 🔧👨‍💻
+
+### Prevención 🔒🛡️
+
+### 14 - File Upload Injection 📤📄 
+
+### Descripción de la vulnerabilidad 💡🔍
+
+### Riesgos asociados ⚠️💥
+
+### Videos educacionales sobre la vulnerabilidad 🎥
+
+### Ejemplo 🔧👨‍💻
+
+### Prevención 🔒🛡️
+
