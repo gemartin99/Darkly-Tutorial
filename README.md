@@ -296,6 +296,20 @@ Validación y sanitización de encabezados. Utilizar conexiones seguras HTTPS qu
 
 ### Ejemplo 🔧👨‍💻
 
+![image](https://github.com/user-attachments/assets/c60f66cd-d9f9-4577-a9b9-0fa018d232a7)
+
+![image](https://github.com/user-attachments/assets/4cb9bcab-059f-41b5-bd86-74b56bca05ee)
+
+![image](https://github.com/user-attachments/assets/813a343e-e232-4579-8ad8-bf5f72856b41)
+
+![image](https://github.com/user-attachments/assets/c99cc41b-b6c5-4991-9c6c-c595d80820a5)
+
+![image](https://github.com/user-attachments/assets/ae2bf3ad-96c3-4840-900b-73b8486327a8)
+
+
+![image](https://github.com/user-attachments/assets/3193fd41-9fb2-490c-81ee-5a94687bcf3c)
+
+
 ### Prevención 🔒🛡️
 
 ### 12 - Robots Admin 🤖👮‍♂️
