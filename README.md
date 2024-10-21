@@ -133,6 +133,13 @@ Verificar que todos los datos recibidos, incluidos los provenientes de campos oc
 
 ### Ejemplo 🔧👨‍💻
 
+![image](https://github.com/user-attachments/assets/6eeca6f5-70e8-4b77-b19c-05df160e95d1)
+
+![image](https://github.com/user-attachments/assets/0179ebe6-805e-4aa7-99e4-af856f502f0a)
+
+![image](https://github.com/user-attachments/assets/85be0a65-e011-4c18-b997-955e31f27780)
+
+
 ### Prevención 🔒🛡️
 
 ### 4 - Survey 📊✅
