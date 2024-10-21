@@ -178,6 +178,18 @@ https://www.youtube.com/watch?v=fbZpsHMgNdk&t=402s
 
 ### Ejemplo 🔧👨‍💻
 
+![image](https://github.com/user-attachments/assets/7f2a5054-f458-4101-b435-33438633016e)
+
+![image](https://github.com/user-attachments/assets/3fbaa5e7-e5b7-46e1-9134-78da2a8b3c1f)
+
+![image](https://github.com/user-attachments/assets/7c5c3b26-8441-4027-ac82-5a8d69d7d677)
+
+![image](https://github.com/user-attachments/assets/9bede95b-7a4b-4908-bbd2-fa25ea12ad51)
+
+![image](https://github.com/user-attachments/assets/eea79633-8a9e-4a6f-bd3b-7e1edf070d5b)
+
+
+
 ### Prevención 🔒🛡️
 
 Tener firmado y cifrado de cookies, monitoreo para detectar cualquier actividad sospechosa, una validación y autenticación adecuada.
