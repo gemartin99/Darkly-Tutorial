@@ -208,6 +208,11 @@ Ejecución de código malicioso, robo de cookies, redirección a sitios malicios
 
 ### Ejemplo 🔧👨‍💻
 
+![image](https://github.com/user-attachments/assets/06ab1bd6-5fc3-4d89-9dca-4bf861cffc51)
+
+![image](https://github.com/user-attachments/assets/7da119c5-479e-4313-81ad-12415e846fd1)
+
+
 ### Prevención 🔒🛡️
 
 Validar y sanitizar todos los datos de entrada para eliminar o escapar cualquier contenido malicioso y codificar adecuadamente todos los datos antes de mostrarlos en la interfaz de usuario
