@@ -152,6 +152,14 @@ Verificar que todos los datos recibidos, incluidos los provenientes de campos oc
 
 ### Ejemplo 🔧👨‍💻
 
+![image](https://github.com/user-attachments/assets/c4061e40-45cc-483c-8416-0500d30eccdd)
+
+![image](https://github.com/user-attachments/assets/b8dc6f65-0fd5-47b7-a94c-fbc273f17041)
+
+![image](https://github.com/user-attachments/assets/3bf90c10-1c16-4135-859d-e8773183a013)
+
+![image](https://github.com/user-attachments/assets/edb39af3-ccc2-41aa-813a-0832aedeeeb1)
+
 ### Prevención 🔒🛡️
 
 ### 5 - Cookie tampering 🍪🛠️
