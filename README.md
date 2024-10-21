@@ -249,6 +249,15 @@ Falsificación de identidad y exposición de información sensible
 
 ### Ejemplo 🔧👨‍💻
 
+![image](https://github.com/user-attachments/assets/9515e083-1500-4735-b33c-af7032182d6c)
+
+![image](https://github.com/user-attachments/assets/c0e05b2b-2f88-4627-b46e-a35669f4f11f)
+
+![image](https://github.com/user-attachments/assets/0f8a807f-0f19-42f0-9ed8-c6edaa8be4cf)
+
+![image](https://github.com/user-attachments/assets/eb896614-e416-43c6-802b-941cf087c2c0)
+
+
 ### Prevención 🔒🛡️
 
 Validación y sanitización de encabezados. Utilizar conexiones seguras HTTPS que van cifradas.
