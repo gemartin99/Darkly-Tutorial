@@ -32,7 +32,7 @@ Si tu idea es entrar a este repo para sacar las flags estas muy equivocado!
 
 14. [File Upload Injection 📤📄 ](#14---file-upload-injection-)
 
-15. [Admin 🛡️] (#14---admin-)
+15. [Admin 🛡️ ](#14---admin-)
 
 ## 1 - Path/Directory traversal  📂🔓
 
@@ -359,5 +359,20 @@ Validación y sanitización de encabezados. Utilizar conexiones seguras HTTPS qu
 ### Videos educacionales sobre la vulnerabilidad 🎥
 
 ### Ejemplo 🔧👨‍💻
+
+![image](https://github.com/user-attachments/assets/a9ffb846-2f56-4a78-b74c-305a2dc4286b)
+
+![image](https://github.com/user-attachments/assets/0e078b86-aba2-451a-bbf7-5bf2c1c655cc)
+
+![image](https://github.com/user-attachments/assets/8172c081-c7a8-476f-b77c-9cdf08c18b04)
+
+![image](https://github.com/user-attachments/assets/5cd6f1a0-b976-4714-97b5-d23e0adb0f8f)
+
+![image](https://github.com/user-attachments/assets/78d5701e-d5e0-4bee-a009-c0dcd1448c4d)
+
+![image](https://github.com/user-attachments/assets/7c043129-f857-4a1d-8685-70499f22c71c)
+
+![image](https://github.com/user-attachments/assets/97fa5b53-8e9b-43ca-ba4b-5115b26e5a4b)
+
 
 ### Prevención 🔒🛡️
