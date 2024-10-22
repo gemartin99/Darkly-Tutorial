@@ -32,6 +32,8 @@ Si tu idea es entrar a este repo para sacar las flags estas muy equivocado!
 
 14. [File Upload Injection 📤📄 ](#14---file-upload-injection-)
 
+15. [Admin 🛡️] (#14---admin-)
+
 ## 1 - Path/Directory traversal  📂🔓
 
 ### Descripción de la vulnerabilidad 💡🔍
@@ -348,3 +350,14 @@ Validación y sanitización de encabezados. Utilizar conexiones seguras HTTPS qu
 
 ### Prevención 🔒🛡️
 
+### 15- Admin 🛡️
+
+### Descripción de la vulnerabilidad 💡🔍
+
+### Riesgos asociados ⚠️💥
+
+### Videos educacionales sobre la vulnerabilidad 🎥
+
+### Ejemplo 🔧👨‍💻
+
+### Prevención 🔒🛡️
