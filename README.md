@@ -56,17 +56,17 @@ Ejemplo básico y otras variantes sobre path traversal [AQUÍ](https://www.youtu
 
 Si has omitido mi advertencia voy explicar cada captura e intentar que aprendas! Presta atención❗👀
 
-1. El primer paso que debemos seguir, una vez estamos dentro de la pagina web, sera observar como estan estructuradas las URLs de la pagina y navegaremos un poco por la web en busca de patrones que sugieran que la web es vulnerable a la inclusion de rutas de archivos o directorios en las URLS.
+1. El primer paso que debemos seguir, una vez estamos dentro de la página web, sera observar como estan estructuradas las URLs de la página y navegaremos un poco por la web en busca de patrones que sugieran que la web es vulnerable a la inclusion de rutas de archivos o directorios en las URLS.
 
 ![image](https://github.com/gemartin99/Darkly/assets/66915274/d245349a-943f-4ce0-a51b-605bd3abe687)
 
-2. Explorando por la pagina vemos que si le damos al botón de ```SIGN IN``` nos cargará la pagina con un panel de inicio de sesión y veremos que la URL de la pagina no sigue una ruta tradicional (absoluta/relativa).
+2. Explorando por la página vemos que si le damos al botón de ```SIGN IN``` nos cargará la página con un panel de inicio de sesión y veremos que la URL de la página no sigue una ruta tradicional (absoluta/relativa).
 
 ![image](https://github.com/gemartin99/Darkly-Tutorial/assets/66915274/eb77e860-7778-4ec2-b8a7-578370322173)
 
 Que significa esta URL❓ La parte de la URL antes del ´?´ sigue siuendo la ruta base. Lo que hay después de ´?´ son parámetros de consulta, estos parámetros proporcionan datos adicionales que son relevantes para la solicitud.
 
-Basicamente, lo que sugiere esto es que lo que le estamos diciendo al servidor es que la pagina (page) que queremos cargar es signin (que eso sera una macro o algo por el estilo de un fichero, por ejemplo: signin.html). 
+Basicamente, lo que sugiere esto es que lo que le estamos diciendo al servidor es que la página (page) que queremos cargar es signin (que eso sera una macro o algo por el estilo de un fichero, por ejemplo: signin.html). 
 
 3. Una vez conocemos como funciona la estructura de URL y sabiendo que el parametro ```page``` puede ser manipulado sustituiremos la ruta de ```signin``` por la ruta a un fichero que nos interese. Lo primero que haremos sera poner varias veces ```../``` ya que eso significa que retrocederemos en los directorios del servidor , de esta manera llegaremos al directorio raiz y una vez ubicados en el directorio raiz le pediremos que cargue el fichero ```/etc/passwd``` ya que es un fichero muy valioso en el cual podemos ver nombres de usuarios, etc.
 
@@ -96,11 +96,11 @@ Ejemplo básico muy parecido al que veremos nosotros, empezar a ver desde min 4:
 
 ### Ejemplo 🔧👨‍💻
 
-1. El primer paso que haremos sera abrir el codigo fuente de la pagina web y examinarlo en busca de formularios ```<form>``` ya que suelen ser lugares comunes donde se encuentran campos ocultos que podrían ser manipulables.
+1. El primer paso que haremos sera abrir el codigo fuente de la página web y examinarlo en busca de formularios ```<form>``` ya que suelen ser lugares comunes donde se encuentran campos ocultos que podrían ser manipulables.
 
    ![image](https://github.com/gemartin99/Darkly-Tutorial/assets/66915274/3c6205fe-4d52-4aa9-b678-11a39a54f39f)
 
-2. Navegando por la pagina hemos encontrado algunos formularios pero en los campos ocultos no aparece nada de valor. Hasta que nos topamos con el apartado ```Recover password```.
+2. Navegando por la página hemos encontrado algunos formularios pero en los campos ocultos no aparece nada de valor. Hasta que nos topamos con el apartado ```Recover password```.
    
    ![image](https://github.com/gemartin99/Darkly-Tutorial/assets/66915274/bfeb403e-42fa-45bc-89ca-0fe601d6209b)
 
@@ -139,15 +139,15 @@ Esta vulnerabilidad ocurre cuando una aplicación web permite a los usuarios ser
 
 ### Ejemplo 🔧👨‍💻
 
-Si hacemos un inspeccionar de la pagina vemos que la aplicación utiliza la estructura ```index.php?page=redirect&site=whatever``` donde el valor de ```site``` no se valida adecuadamente. Esto significa que un atacante puede manipular el valor del parámetro site para redirigir a los usuarios a cualquier URL, incluyendo sitios potencialmente maliciosos.
+   1. Al inspeccionar la página, observamos que la aplicación utiliza la estructura                                 ```index.php?page=redirect&site=whatever``` donde el valor ```site``` no se valida correctamente. Esto permite que un atacante manipule el parámetro ```site``` para redirigir a los usuarios a cualquier URL, incluidas aquellas potencialmente maliciosas.
 
 ![image](https://github.com/user-attachments/assets/6eeca6f5-70e8-4b77-b19c-05df160e95d1)
 
-Modificamos el valor de site por el de otra pagina.
+   2. Modificamos el valor de ```site``` por el de otra página.
 
 ![image](https://github.com/user-attachments/assets/0179ebe6-805e-4aa7-99e4-af856f502f0a)
 
-Pinchamos sobre el logo que hayamos modificado la redirección y ya nos debe dar la flag.
+   3. Finalmente, al hacer clic en el logo que hemos modificado con la redirección, deberíamos obtener la flag.
 
 ![image](https://github.com/user-attachments/assets/85be0a65-e011-4c18-b997-955e31f27780)
 
@@ -170,23 +170,23 @@ Acceso no autorizado por parte del atacante a funcionalidades o datos restringid
 
 ### Ejemplo 🔧👨‍💻
 
-En este caso, si entramos en la pestaña de survey de la pagina vemos una encuesta.
+   1. En este caso, si entramos en la pestaña survey de la página, vemos la siguiente encuesta.
 
 ![image](https://github.com/user-attachments/assets/7cb59bbb-64d8-47f5-9a61-a290a213fda7)
 
-Si hacemos un inspeccionar de la pagina y analizamos un poco la encuesta parece que la aplicación no valida correctamente los valores de entrada enviados a través de un formulario POST. El hecho de que se pueda enviar el parámetro ```value=42``` sin que la aplicación verifique si ese valor es válido o no sugiere que hay un fallo en la lógica de validación.
+   2. Al inspeccionar la página o revisar el código fuente, notamos que la encuesta no valida correctamente los valores de entrada enviados a través de un formulario POST. El hecho de que se pueda enviar el parámetro ```value=``` sin que la aplicación verifique si es un valor válido indica un fallo en la lógica de validación.
 
 ![image](https://github.com/user-attachments/assets/c4061e40-45cc-483c-8416-0500d30eccdd)
 
-Modificamos el campo value por el valor que queramos. En este caso si escogemos la opcion 10 de ol el valor sera 9999999999999.
+   3. Modificamos el campo value por el valor que queramos. En este caso, si escogemos la opción 10 de ol, el valor será ```9999999999999```.
 
 ![image](https://github.com/user-attachments/assets/b8dc6f65-0fd5-47b7-a94c-fbc273f17041)
 
-Seleccionamos esa opción.
+   4. Hacemos clic en la opción que hemos modificado.
 
 ![image](https://github.com/user-attachments/assets/3bf90c10-1c16-4135-859d-e8773183a013)
 
-Nos devuelve la flag del ejercicio.
+   5. Esto nos devuelve la flag del ejercicio.
 
 ![image](https://github.com/user-attachments/assets/edb39af3-ccc2-41aa-813a-0832aedeeeb1)
 
@@ -210,23 +210,23 @@ https://www.youtube.com/watch?v=fbZpsHMgNdk&t=402s
 
 ### Ejemplo 🔧👨‍💻
 
-Inspeccionamos la pagina y vemos nuestra cookie de sesion escribiendo el comando ```document.cookie``` en la consola del navegador. Lo que vemos es ver el id de sesion y el valor de la cookie. Lo que podemos entender es que pone ```I_am_admin=``` el valor no entendemos que pone, asi buscamos como desencriptarlo.
+   1. Inspeccionamos la página y vemos nuestra cookie de sesión escribiendo el comando ```document.cookie``` en la          consola del navegador. Observamos el ID de sesión y el valor de la cookie. Notamos que contiene ```I_am_admin=```, pero no entendemos el valor asignado, así que buscamos la forma de desencriptarlo.
 
 ![image](https://github.com/user-attachments/assets/7f2a5054-f458-4101-b435-33438633016e)
 
-Resulta que el valor es ```false```. Es decir nuestra cookie vale false y el sesion id es I_am_admin=false. Pues lo que haremos sera cambiar el valor de la cookie y buscar que ponga true.
+   2. Resulta que el valor es ```false```. Lo que indica que nuestra cookie tiene el valor de ```I_am_admin=false```.  Lo que haremos será cambiar el valor de la cookie a ```true```.
 
 ![image](https://github.com/user-attachments/assets/3fbaa5e7-e5b7-46e1-9134-78da2a8b3c1f)
 
-Cogemos la string ```true``` y la encriptamos en md5, copiamos ese valor.
+   3. Cogemos la cadena ```true``` y la encriptamos en md5, copiamos ese valor.
 
 ![image](https://github.com/user-attachments/assets/7c5c3b26-8441-4027-ac82-5a8d69d7d677)
 
-Modificamos el valor de nuestra cookie de sesion al true encriptado.
+   4. Modificamos el valor de nuestra cookie de sesión para que sea el ```true``` encriptado.
 
 ![image](https://github.com/user-attachments/assets/9bede95b-7a4b-4908-bbd2-fa25ea12ad51)
 
-Si refrescamos la pagina ya seremos admins asique nos da la flag correspondiente.
+   5. Al refrescar la página, ya seremos administradores, lo que nos dará acceso a la flag correspondiente.
 
 ![image](https://github.com/user-attachments/assets/eea79633-8a9e-4a6f-bd3b-7e1edf070d5b)
 
@@ -250,11 +250,11 @@ Ejecución de código malicioso, robo de cookies, redirección a sitios malicios
 
 ### Ejemplo 🔧👨‍💻
 
-Lo que vemos en el apartado de feedback es que si pones un mensaje y lo publicas ese mismo texto se ve en la pagina web. Lo que vamos a intentar es pasarle algun script para ver si esta mal sanitizado y no lo interpreta como texto plano. En este caso al ser un CTF si en el mensaje aparece la palabra script ya te da la flag, nos ahorramos el payload.
+   1. En la sección de ```Feedback```, observamos que al publicar un mensaje, este se refleja directamente en la página web. Lo que intentaremos hacer es enviar un script para comprobar si el input está mal sanitizado y si, en lugar de tratarlo como texto plano, el servidor lo ejecuta. En este caso particular, al ser un CTF, si el mensaje contiene la palabra ```script```, automáticamente obtenemos la flag, por lo que no es necesario un payload más complejo.
 
 ![image](https://github.com/user-attachments/assets/06ab1bd6-5fc3-4d89-9dca-4bf861cffc51)
 
-Una vez le damos a sign ya nos aparece la flag.
+   2. Una vez le damos a sign ya nos aparece la flag.
 
 ![image](https://github.com/user-attachments/assets/7da119c5-479e-4313-81ad-12415e846fd1)
 
@@ -295,25 +295,25 @@ Falsificación de identidad y exposición de información sensible
 
 ### Ejemplo 🔧👨‍💻
 
-Si vamos al final de toda la web veremos una redireccion al final.
+   1. Si nos desplazamos hasta el final de la página web, encontraremos una redirección.
 
 ![image](https://github.com/user-attachments/assets/9515e083-1500-4735-b33c-af7032182d6c)
 
-Nos lleva a esta pagina que ya de primeras nos comienza a sonar la cancion de albatroz y un texto de la wikipedia. Pagina rara cuanto menos. Asique vamos a inspeccionarla y ver el codigo fuente.
+   2. Esta nos lleva a una página donde, de inmediato, comienza a sonar la canción de "Albatroz" y aparece un texto extraído de Wikipedia. Es, cuanto menos, una página peculiar. Por lo tanto, procederemos a inspeccionarla y revisar su código fuente.
 
 ![image](https://github.com/user-attachments/assets/c0e05b2b-2f88-4627-b46e-a35669f4f11f)
 
-Si buscamos bien en el codigo fuente de la pagina encontraremos dos comentarios muy interesantes. Que tenimos que venir de ```https://www.nsa.gov/``` y que usemos el navegador ```ft_bornToSec``` 
+   3. Si examinamos bien en el codigo fuente de la página encontraremos dos comentarios muy interesantes. Uno nos indica que debemos acceder desde la URL ```https://www.nsa.gov/``` y el otro nos sugiere usar el navegador con el agente de usuario ```ft_bornToSec``` 
 
 ![image](https://github.com/user-attachments/assets/114e94fb-07e7-4dd9-a4ca-24ff2622c3d1)
 
 ![image](https://github.com/user-attachments/assets/7e0cf2f1-a546-4ff3-8943-c57410dc138b)
 
-Genial, pues sabiendo esto vamos a hacer una solicitud curl modificando los parametros que nos pide. Con el flag -e especificaremos un encabezado Referer, engañando al sistema haciendo que crea que la solicitud proviene de un lugar de confianza. Con el flag -A estamos indicando que el User-Agent que se enviará con la solicitud es ```ft_bornToSec```. Simulando el navegador. Por ultimo indicamos sobre que pagina queremos hacer esa peticion y el resultado del comando nos lo almacene en un fichero llamado file.txt
+   4. Genial, sabiendo esto, vamos a hacer una solicitud curl modificando los parámetros que nos pide. Con el flag -e especificaremos un encabezado **Referer**, engañando al sistema para que crea que la solicitud proviene de un lugar de confianza, en este caso, ```https://www.nsa.gov/```. Con el flag -A estamos indicando que el **User-Agent** que se enviará con la solicitud es ```ft_bornToSec```, simulando el navegador. Por último, indicamos sobre qué página queremos hacer esa petición, y el resultado del comando se almacenará en un fichero llamado file.txt.
 
 ![image](https://github.com/user-attachments/assets/0f8a807f-0f19-42f0-9ed8-c6edaa8be4cf)
 
-Una vez se ha realizado la solicitud se nos habra almacenado el contenido html en el fichero y haremos grep en busca de la flag.
+   5. Una vez realizada la solicitud, el contenido HTML se habrá almacenado en el archivo. A continuación, utilizaremos ```grep``` para buscar la flag dentro del archivo.
 
 ![image](https://github.com/user-attachments/assets/eb896614-e416-43c6-802b-941cf087c2c0)
 
@@ -433,15 +433,15 @@ Ejecución de código malicioso, acceso no autorizado, filtración de datos, da�
 
 ### Ejemplo 🔧👨‍💻
 
-Si nos vamos a la pestaña de Add image vemos que podemos subir un archivo.
+   1. Si nos vamos a la pestaña de ```Add image``` vemos que podemos subir un archivo.
 
 ![image](https://github.com/user-attachments/assets/148e412c-9e37-43fd-8edc-efd642d2c242)
 
-Creamos un fichero malicioso, en este caso no hara nada pero la idea es crear un fichero con contenido malicioso en .php
+   2. Creamos un fichero malicioso, en este caso no hara nada pero la idea es crear un fichero con contenido malicioso en ```.php```
 
 ![image](https://github.com/user-attachments/assets/c1e894b1-b97b-41f4-8cd9-dc2ed5536e41)
 
-Falseamos una peticion para que el servidor crea que esta recibiendo un fichero .jpeg cuando realmente estamos subiendo el fichero malicioso .php. La salida de este comando se hara en el fichero tmp.txt. Despues lo que haremos sera hacer cat al fichero y grep para buscar la flag.
+   3. Falseamos una petición para que el servidor crea que esta recibiendo un fichero ```.jpeg``` cuando realmente estamos subiendo el fichero malicioso ```.php```. La salida de este comando se hara en el fichero tmp.txt. Despues lo que           haremos sera hacer cat al fichero y grep para buscar la flag.
 
 ![image](https://github.com/user-attachments/assets/9865b422-1d82-420e-b493-52d96b18fcd8)
 
