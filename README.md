@@ -412,17 +412,35 @@ Como usar Hydra en Panel de LOGIN WEB [AQUÍ](https://www.youtube.com/watch?v=3q
 
 ### Ejemplo 🔧👨‍💻
 
+   1. Una de las primeras tareas al buscar vulnerabilidades en una página web es identificar directorios ocultos. Para ello, utilizaremos la herramienta gobuster junto con un diccionario de directorios, lo que nos permitirá probar diferentes rutas a partir de la raíz del sitio.
+
 ![image](https://github.com/user-attachments/assets/a9ffb846-2f56-4a78-b74c-305a2dc4286b)
+
+   2. Al ingresar en las distintas rutas descubiertas, obtendremos diferentes tipos de información. Por ejemplo, al acceder a ```admin/```, observamos que hay un panel de inicio de sesión.
 
 ![image](https://github.com/user-attachments/assets/0e078b86-aba2-451a-bbf7-5bf2c1c655cc)
 
+   3. En la ruta ```whatever/```, encontramos un archivo. Procedemos a descargarlo para analizar su contenido.
+
 ![image](https://github.com/user-attachments/assets/8172c081-c7a8-476f-b77c-9cdf08c18b04)
+
+   4. Al visualizar el contenido del archivo descargado, se revela información importante: aparece el usuario ```root``` junto a lo que parece ser una contraseña. Intentamos ingresar estas credenciales en el panel de inicio de sesión de ```admin/```, pero el intento resulta infructuoso. Es posible que la contraseña esté encriptada.
 
 ![image](https://github.com/user-attachments/assets/5cd6f1a0-b976-4714-97b5-d23e0adb0f8f)
 
+   5. Seleccionamos el texto encriptado y buscamos una página que permita desencriptar MD5. Introducimos la cadena en la herramienta de desencriptación, la cual nos indica que la contraseña es ```qwerty123@```.
+
 ![image](https://github.com/user-attachments/assets/78d5701e-d5e0-4bee-a009-c0dcd1448c4d)
 
+   6.  Ahora, intentamos nuevamente iniciar sesión con las credenciales:
+      
+         **Usuario**: ```root```
+       
+         **Contraseña**: ```qwerty123@```     
+
 ![image](https://github.com/user-attachments/assets/7c043129-f857-4a1d-8685-70499f22c71c)
+
+   7. Al ingresar correctamente, logramos acceder y conseguimos la flag correspondiente.
 
 ![image](https://github.com/user-attachments/assets/97fa5b53-8e9b-43ca-ba4b-5115b26e5a4b)
 
@@ -448,19 +466,19 @@ Ejemplo básico parecido al que veremos nosotros [AQUÍ](https://www.youtube.com
 
 ### Ejemplo 🔧👨‍💻
 
-Si clickamos sobre la imagen nsa se nos abre la siguiente pagina.
+   1. Si clickamos sobre la imagen nsa se nos abre la siguiente pagina.
 
 ![image](https://github.com/user-attachments/assets/273c8319-6028-4ef0-88c1-1dd42d97823e)
 
-La URL contiene parámetros, en este caso, ```page``` y ```src```. Las aplicaciones web a menudo utilizan parámetros de la URL para generar contenido dinámico. Si el parámetro ```src``` se usa directamente en el HTML sin ser validado o sanitizado, puede ser un punto de inyección. Probamos asignar un payload de XSS directamente a la URL, pero sin éxito.
+   2. La URL contiene parámetros, en este caso, ```page``` y ```src```. Las aplicaciones web a menudo utilizan parámetros de la URL para generar contenido dinámico. Si el parámetro ```src``` se usa directamente en el HTML sin ser validado o sanitizado, puede ser un punto de inyección. Probamos asignar un payload de XSS directamente a la URL, pero sin éxito.
 
 ![image](https://github.com/user-attachments/assets/09fab0a7-b310-43df-b416-c835a6072bbd)
 
-Como no hemos tenido éxito poniendolo a lo bruto, utilizaremos el esquema de URI que permite incrustar datos directamente en una página web o en un archivo, en lugar de enlazarlos desde una ubicación externa. Esto se utiliza comúnmente para incluir imágenes, archivos de texto o cualquier otro tipo de datos directamente en el código HTML o CSS. La estructura básica de una DATA URI es la siguiente: data:[tipo_mime][;base64], [contenido]. Sabiendo esto vamos a codificar el script en base64 para intentar colarlo.
+   3. Como no hemos tenido éxito poniendolo a lo bruto, utilizaremos el esquema de URI que permite incrustar datos directamente en una página web o en un archivo, en lugar de enlazarlos desde una ubicación externa. Esto se utiliza comúnmente para incluir imágenes, archivos de texto o cualquier otro tipo de datos directamente en el código HTML o CSS. La estructura básica de una DATA URI es la siguiente: data:[tipo_mime][;base64], [contenido]. Sabiendo esto vamos a codificar el script en base64 para intentar colarlo.
 
 ![image](https://github.com/user-attachments/assets/9e69b278-9864-41cf-9ef4-773c0a154f62)
 
-Modificamos la URL siguiendo la estructura básica de una DATA URI para asi incluir el script codificado.
+   4. Modificamos la URL siguiendo la estructura básica de una DATA URI para asi incluir el script codificado.
  ```http://10.11.250.221/index.php?page=media&src=data:text/html;base64,PHNjcmlwdD5hbGVydCgnZGFtZSBsYSBmbGFnJyk8L3NjcmlwdD4=```. Esta vez si, con éxito.
 
 ![image](https://github.com/user-attachments/assets/35a840e2-f201-41e5-97ef-d85e02a47e38)
