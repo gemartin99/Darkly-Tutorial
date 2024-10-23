@@ -22,7 +22,7 @@ Si tu idea es entrar a este repo para sacar las flags estas muy equivocado! La g
 
 9. [SQL Injection Images 📸💉](#9---sql-injection-images-)
 
-10. [SQL Injection Images 👥💉](#10---sql-injection-members-)
+10. [SQL Injection Members 👥💉](#10---sql-injection-members-)
 
 11. [Bruteforce 🔐⚔️](#11---bruteforce-%EF%B8%8F)
 
