@@ -451,7 +451,17 @@ Falseamos una peticion para que el servidor crea que esta recibiendo un fichero 
 
 Implementar validaciones rigurosas para los archivos cargados. Esto incluye verificar la extensión del archivo, el tipo MIME y el contenido real del archivo para asegurarse de que es seguro.
 
+
+<br>
+<br>
+<br>
+
+#
 # Este tutorial ha llevado mucho trabajo, si crees que te ha sido útil agradeceria mucho starred 🌟 para que así se comparta y pueda ayudar a más estudiantes 👨🏻‍🎓❤️
+<br>
+<br>
+<br>
+
 
 # Contacto 📥
 
