@@ -8,11 +8,11 @@ Si tu idea es entrar a este repo para sacar las flags estas muy equivocado!
 
 2. [Hidden input 🕵️‍♂️🔍](#2---hidden-input-%EF%B8%8F%EF%B8%8F)
 
-3. [Redirections 🔄🔀](#3---redirections-)
+3. [Open Redirection 🔄🔀](#3---open-redirection-)
 
 4. [Survey 📊✅](#4---survey-)
 
-5. [Cookie Tampering 🍪🛠️](#5---cookie-tampering-)
+5. [Cookie Tampering 🍪🛠️](#5---cookie-tampering-%EF%B8%8F)
    
 6. [Stored XSS 💬⚠️](#6---stored-xss--%EF%B8%8F)
 
@@ -28,7 +28,7 @@ Si tu idea es entrar a este repo para sacar las flags estas muy equivocado!
 
 12. [Robots 🤖👮‍♂️](#12---robots-admin-%EF%B8%8F)
 
-13. [Data URI Injection 📄🔍](#13---data-uri-injection-)
+13. [XSS Reflected 🪟💥](#13---xss-reflected-)
 
 14. [File Upload Injection 📤📄 ](#14---file-upload-injection-)
 
@@ -123,44 +123,76 @@ Ejemplo básico muy parecido al que veremos nosotros, empezar a ver desde min 4:
 
 Verificar que todos los datos recibidos, incluidos los provenientes de campos ocultos, sean válidos y autorizados antes de procesar cualquier acción.
 
-## 3 - Redirections 🔄🔀
+## 3 - Open Redirection 🔄🔀
 
 ### Descripción de la vulnerabilidad 💡🔍
 
+Esta vulnerabilidad ocurre cuando una aplicación web permite a los usuarios ser redirigidos a URLs externas sin validar su seguridad. Esto permite a un atacante manipular la URL de redirección, llevando a las víctimas a sitios maliciosos que pueden estar diseñados para el phishing o la distribución de malware.
+
 ### Riesgos asociados ⚠️💥
+
+- Phishing: Los usuarios pueden ser engañados para que ingresen información confidencial en sitios fraudulentos.
+- Distribución de Malware: Los atacantes pueden redirigir a los usuarios a sitios que descargan software malicioso.
+- Pérdida de confianza: La reputación de la aplicación se puede ver gravemente afectada.
 
 ### Videos educacionales sobre la vulnerabilidad 🎥
 
 ### Ejemplo 🔧👨‍💻
 
+Si hacemos un inspeccionar de la pagina vemos que la aplicación utiliza la estructura ```index.php?page=redirect&site=whatever``` donde el valor de ```site``` no se valida adecuadamente. Esto significa que un atacante puede manipular el valor del parámetro site para redirigir a los usuarios a cualquier URL, incluyendo sitios potencialmente maliciosos.
+
 ![image](https://github.com/user-attachments/assets/6eeca6f5-70e8-4b77-b19c-05df160e95d1)
 
+Modificamos el valor de site por el de otra pagina.
+
 ![image](https://github.com/user-attachments/assets/0179ebe6-805e-4aa7-99e4-af856f502f0a)
+
+Pinchamos sobre el logo que hayamos modificado la redirección y ya nos debe dar la flag.
 
 ![image](https://github.com/user-attachments/assets/85be0a65-e011-4c18-b997-955e31f27780)
 
 
 ### Prevención 🔒🛡️
 
+Validar las URL's, permitiendo solo sitios de confianza o usar whitelists de dominios permitidos.
+
 ### 4 - Survey 📊✅
 
 ### Descripción de la vulnerabilidad 💡🔍
 
+La aplicación no valida correctamente los valores de entrada enviados a través de un formulario POST. Pudiendo modificar los valores de dicho formulario.
+
 ### Riesgos asociados ⚠️💥
+
+Acceso no autorizado por parte del atacante a funcionalidades o datos restringidos. El caso mas claro seria poder cambiar el valor a productos en venta.
 
 ### Videos educacionales sobre la vulnerabilidad 🎥
 
 ### Ejemplo 🔧👨‍💻
 
+En este caso, si entramos en la pestaña de survey de la pagina vemos una encuesta.
+
+![image](https://github.com/user-attachments/assets/7cb59bbb-64d8-47f5-9a61-a290a213fda7)
+
+Si hacemos un inspeccionar de la pagina y analizamos un poco la encuesta parece que la aplicación no valida correctamente los valores de entrada enviados a través de un formulario POST. El hecho de que se pueda enviar el parámetro ```value=42``` sin que la aplicación verifique si ese valor es válido o no sugiere que hay un fallo en la lógica de validación.
+
 ![image](https://github.com/user-attachments/assets/c4061e40-45cc-483c-8416-0500d30eccdd)
+
+Modificamos el campo value por el valor que queramos. En este caso si escogemos la opcion 10 de ol el valor sera 9999999999999.
 
 ![image](https://github.com/user-attachments/assets/b8dc6f65-0fd5-47b7-a94c-fbc273f17041)
 
+Seleccionamos esa opción.
+
 ![image](https://github.com/user-attachments/assets/3bf90c10-1c16-4135-859d-e8773183a013)
+
+Nos devuelve la flag del ejercicio.
 
 ![image](https://github.com/user-attachments/assets/edb39af3-ccc2-41aa-813a-0832aedeeeb1)
 
 ### Prevención 🔒🛡️
+
+Validación de entradas, sanitizando todo correctamente. Sobretodo, implementandolo en el backend ya que el frontend puede ser manipulado fácilmente por un atacante.
 
 ### 5 - Cookie tampering 🍪🛠️
 
@@ -178,13 +210,23 @@ https://www.youtube.com/watch?v=fbZpsHMgNdk&t=402s
 
 ### Ejemplo 🔧👨‍💻
 
+Inspeccionamos la pagina y vemos nuestra cookie de sesion escribiendo el comando ```document.cookie``` en la consola del navegador. Lo que vemos es ver el id de sesion y el valor de la cookie. Lo que podemos entender es que pone ```I_am_admin=``` el valor no entendemos que pone, asi buscamos como desencriptarlo.
+
 ![image](https://github.com/user-attachments/assets/7f2a5054-f458-4101-b435-33438633016e)
+
+Resulta que el valor es ```false```. Es decir nuestra cookie vale false y el sesion id es I_am_admin=false. Pues lo que haremos sera cambiar el valor de la cookie y buscar que ponga true.
 
 ![image](https://github.com/user-attachments/assets/3fbaa5e7-e5b7-46e1-9134-78da2a8b3c1f)
 
+Cogemos la string ```true``` y la encriptamos en md5, copiamos ese valor.
+
 ![image](https://github.com/user-attachments/assets/7c5c3b26-8441-4027-ac82-5a8d69d7d677)
 
+Modificamos el valor de nuestra cookie de sesion al true encriptado.
+
 ![image](https://github.com/user-attachments/assets/9bede95b-7a4b-4908-bbd2-fa25ea12ad51)
+
+Si refrescamos la pagina ya seremos admins asique nos da la flag correspondiente.
 
 ![image](https://github.com/user-attachments/assets/eea79633-8a9e-4a6f-bd3b-7e1edf070d5b)
 
@@ -208,7 +250,11 @@ Ejecución de código malicioso, robo de cookies, redirección a sitios malicios
 
 ### Ejemplo 🔧👨‍💻
 
+Lo que vemos en el apartado de feedback es que si pones un mensaje y lo publicas ese mismo texto se ve en la pagina web. Lo que vamos a intentar es pasarle algun script para ver si esta mal sanitizado y no lo interpreta como texto plano. En este caso al ser un CTF si en el mensaje aparece la palabra script ya te da la flag, nos ahorramos el payload.
+
 ![image](https://github.com/user-attachments/assets/06ab1bd6-5fc3-4d89-9dca-4bf861cffc51)
+
+Una vez le damos a sign ya nos aparece la flag.
 
 ![image](https://github.com/user-attachments/assets/7da119c5-479e-4313-81ad-12415e846fd1)
 
@@ -249,11 +295,25 @@ Falsificación de identidad y exposición de información sensible
 
 ### Ejemplo 🔧👨‍💻
 
+Si vamos al final de toda la web veremos una redireccion al final.
+
 ![image](https://github.com/user-attachments/assets/9515e083-1500-4735-b33c-af7032182d6c)
+
+Nos lleva a esta pagina que ya de primeras nos comienza a sonar la cancion de albatroz y un texto de la wikipedia. Pagina rara cuanto menos. Asique vamos a inspeccionarla y ver el codigo fuente.
 
 ![image](https://github.com/user-attachments/assets/c0e05b2b-2f88-4627-b46e-a35669f4f11f)
 
+Si buscamos bien en el codigo fuente de la pagina encontraremos dos comentarios muy interesantes. Que tenimos que venir de ```https://www.nsa.gov/``` y que usemos el navegador ```ft_bornToSec``` 
+
+![image](https://github.com/user-attachments/assets/114e94fb-07e7-4dd9-a4ca-24ff2622c3d1)
+
+![image](https://github.com/user-attachments/assets/7e0cf2f1-a546-4ff3-8943-c57410dc138b)
+
+Genial, pues sabiendo esto vamos a hacer una solicitud curl modificando los parametros que nos pide. Con el flag -e especificaremos un encabezado Referer, engañando al sistema haciendo que crea que la solicitud proviene de un lugar de confianza. Con el flag -A estamos indicando que el User-Agent que se enviará con la solicitud es ```ft_bornToSec```. Simulando el navegador. Por ultimo indicamos sobre que pagina queremos hacer esa peticion y el resultado del comando nos lo almacene en un fichero llamado file.txt
+
 ![image](https://github.com/user-attachments/assets/0f8a807f-0f19-42f0-9ed8-c6edaa8be4cf)
+
+Una vez se ha realizado la solicitud se nos habra almacenado el contenido html en el fichero y haremos grep en busca de la flag.
 
 ![image](https://github.com/user-attachments/assets/eb896614-e416-43c6-802b-941cf087c2c0)
 
@@ -338,7 +398,7 @@ Validación y sanitización de encabezados. Utilizar conexiones seguras HTTPS qu
 
 ### Prevención 🔒🛡️
 
-### 13 - Data URI Injection 📄🔍
+### 13 - XSS Reflected 🪟💥
 
 ### Descripción de la vulnerabilidad 💡🔍
 
