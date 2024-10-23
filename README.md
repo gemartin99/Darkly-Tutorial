@@ -448,11 +448,20 @@ Ejemplo básico parecido al que veremos nosotros [AQUÍ](https://www.youtube.com
 
 ### Ejemplo 🔧👨‍💻
 
+Si clickamos sobre la imagen nsa se nos abre la siguiente pagina.
+
 ![image](https://github.com/user-attachments/assets/273c8319-6028-4ef0-88c1-1dd42d97823e)
+
+La URL contiene parámetros, en este caso, ```page``` y ```src```. Las aplicaciones web a menudo utilizan parámetros de la URL para generar contenido dinámico. Si el parámetro ```src``` se usa directamente en el HTML sin ser validado o sanitizado, puede ser un punto de inyección. Probamos asignar un payload de XSS directamente a la URL, pero sin éxito.
+
+![image](https://github.com/user-attachments/assets/09fab0a7-b310-43df-b416-c835a6072bbd)
+
+Como no hemos tenido éxito poniendolo a lo bruto, utilizaremos el esquema de URI que permite incrustar datos directamente en una página web o en un archivo, en lugar de enlazarlos desde una ubicación externa. Esto se utiliza comúnmente para incluir imágenes, archivos de texto o cualquier otro tipo de datos directamente en el código HTML o CSS. La estructura básica de una DATA URI es la siguiente: data:[tipo_mime][;base64], [contenido]. Sabiendo esto vamos a codificar el script en base64 para intentar colarlo.
 
 ![image](https://github.com/user-attachments/assets/9e69b278-9864-41cf-9ef4-773c0a154f62)
 
-```http://10.11.250.221/index.php?page=media&src=data:text/html;base64,PHNjcmlwdD5hbGVydCgnZGFtZSBsYSBmbGFnJyk8L3NjcmlwdD4=```
+Modificamos la URL siguiendo la estructura básica de una DATA URI para asi incluir el script codificado.
+ ```http://10.11.250.221/index.php?page=media&src=data:text/html;base64,PHNjcmlwdD5hbGVydCgnZGFtZSBsYSBmbGFnJyk8L3NjcmlwdD4=```. Esta vez si, con éxito.
 
 ![image](https://github.com/user-attachments/assets/35a840e2-f201-41e5-97ef-d85e02a47e38)
 
