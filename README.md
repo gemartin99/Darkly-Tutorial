@@ -374,7 +374,11 @@ Validación y sanitización de encabezados. Utilizar conexiones seguras HTTPS qu
 
 ### Descripción de la vulnerabilidad 💡🔍
 
+Ocurre cuando un atacante intenta adivinar credenciales de acceso, como contraseñas, mediante un método automatizado que prueba combinaciones de usuarios y contraseñas. Este ataque es efectivo en sistemas que no implementan límites en los intentos de inicio de sesión, lo que permite al atacante intentar múltiples combinaciones en un corto período.
+
 ### Riesgos asociados ⚠️💥
+
+Acceso no autorizado a cuentas críticas, la información sensible puede ser robada y los múltiples intentos pueden sobrecargar el sistema.
 
 ### Videos educacionales sobre la vulnerabilidad 🎥
 
@@ -386,29 +390,54 @@ Como usar Hydra en Panel de LOGIN WEB [AQUÍ](https://www.youtube.com/watch?v=3q
 
 ### Ejemplo 🔧👨‍💻
 
+   1. Uno de los primeros elementos que llama nuestra atención en la página web es el llamativo botón de ```Sign In```. 
+
 ![image](https://github.com/user-attachments/assets/c60f66cd-d9f9-4577-a9b9-0fa018d232a7)
+
+   2.  Al hacer clic en este botón, somos redirigidos al siguiente panel de inicio de sesión.
 
 ![image](https://github.com/user-attachments/assets/4cb9bcab-059f-41b5-bd86-74b56bca05ee)
 
+   3.  En este panel, si introducimos credenciales incorrectas, el servidor carga el archivo ```WrongAnswer.gif``` como respuesta.
+      
 ![image](https://github.com/user-attachments/assets/813a343e-e232-4579-8ad8-bf5f72856b41)
 
+   4. Procedemos a realizar un ataque de fuerza bruta en dicho panel utilizando la herramienta **Hydra**. Para ello, configuramos el usuario como ```admin``` y la contraseña se irá probando desde el fichero ```rockyou.txt```. También debemos especificar la URL del panel y el tipo de petición que deseamos realizar. Es importante incluir los parámetros que queremos modificar entre ```^^``` y establecer que solo nos muestre el usuario y la contraseña cuando la respuesta del servidor sea diferente a ```WrongAnswer.gif```. Una vez que ejecutamos el comando, debemos esperar un momento mientras Hydra realiza el ataque.
+      
 ![image](https://github.com/user-attachments/assets/c99cc41b-b6c5-4991-9c6c-c595d80820a5)
+
+   5. Cuando Hydra termina, introducimos las credenciales obtenidas en el panel de inicio de sesión. En este caso, usamos:
+
+      **Usuario**: ```admin```
+      
+      **Contraseña**: ```shadow```
 
 ![image](https://github.com/user-attachments/assets/ae2bf3ad-96c3-4840-900b-73b8486327a8)
 
-
+   6. Después de iniciar sesión correctamente, accedemos y obtenemos la flag del ejercicio.
+      
 ![image](https://github.com/user-attachments/assets/3193fd41-9fb2-490c-81ee-5a94687bcf3c)
 
 
 ### Prevención 🔒🛡️
 
+Limitar los intentos de inicio de sesión y bloquear la cuenta tras varios intentos fallidos, requerir un segundo factor de autenticación para acceder a la cuenta y fomentar el uso de contraseñas complejas.
+
 ### 12 - Robots Admin 🤖👮‍♂️
 
 ### Descripción de la vulnerabilidad 💡🔍
 
+En este caso, esta vulnerabilidad se podría clasificar como Exposición de Información Sensible. Esta vulnerabilidad ocurre cuando un sistema revela información que no debería estar accesible, como contraseñas, a través de archivos de configuración o rutas ocultas. 
+
 ### Riesgos asociados ⚠️💥
 
+Permite a un atacante acceder a áreas restringidas del sistema, implicando con ello la exposición de credenciales críticas y daño a la reputación.
+
 ### Videos educacionales sobre la vulnerabilidad 🎥
+
+▶️ Videos sobre como realizar Fuzzing 🔍🧪:
+
+Qué es **FUZZING❓** [AQUI](https://www.youtube.com/watch?v=W3-JGk7H2Cg)
 
 ### Ejemplo 🔧👨‍💻
 
@@ -445,6 +474,8 @@ Como usar Hydra en Panel de LOGIN WEB [AQUÍ](https://www.youtube.com/watch?v=3q
 ![image](https://github.com/user-attachments/assets/97fa5b53-8e9b-43ca-ba4b-5115b26e5a4b)
 
 ### Prevención 🔒🛡️
+
+Asegurarse de que archivos como robots.txt no revelen información sensible, utilizar nombres menos evidentes para directorios críticos (por ejemplo, cambiar /admin/ a algo como /s3cr3t-area-2024/) y asegurarse de que todos los accesos a áreas sensibles requieran credenciales sólidas y que se implementen roles de usuario.
 
 ### 13 - XSS Reflected 🪟💥
 
