@@ -137,6 +137,12 @@ Esta vulnerabilidad ocurre cuando una aplicación web permite a los usuarios ser
 
 ### Videos educacionales sobre la vulnerabilidad 🎥
 
+▶️ Videos sobre Open Redirect 🔄🔀:
+
+Explicación de **Open Redirect** [AQUÍ](https://www.youtube.com/watch?v=iP3cA6MBjwQ)
+
+Ejemplo de uso [AQUI](https://www.youtube.com/watch?v=UJRytPAvQks&list=PLy8t3TIwSh3tMEAjyldNNbjtTmm5G7kFl&index=5)
+
 ### Ejemplo 🔧👨‍💻
 
    1. Al inspeccionar la página, observamos que la aplicación utiliza la estructura                                 ```index.php?page=redirect&site=whatever``` donde el valor ```site``` no se valida correctamente. Esto permite que un atacante manipule el parámetro ```site``` para redirigir a los usuarios a cualquier URL, incluidas aquellas potencialmente maliciosas.
@@ -160,13 +166,17 @@ Validar las URL's, permitiendo solo sitios de confianza o usar whitelists de dom
 
 ### Descripción de la vulnerabilidad 💡🔍
 
-La aplicación no valida correctamente los valores de entrada enviados a través de un formulario POST. Pudiendo modificar los valores de dicho formulario.
+La aplicación no valida correctamente los valores de entrada enviados a través de un formulario POST. Pudiendo modificar los valores de dicho formulario. Esta vulnerabilidad es conocida como **Client-Side Validation Bypass**.
 
 ### Riesgos asociados ⚠️💥
 
-Acceso no autorizado por parte del atacante a funcionalidades o datos restringidos. El caso mas claro seria poder cambiar el valor a productos en venta.
+Fraude financiero, acceso no autorizado a servicios o productos y integridad de los datos comprometida.
 
 ### Videos educacionales sobre la vulnerabilidad 🎥
+
+▶️ Videos sobre **Client-Side Validation Bypass**💰🔧:
+
+Ejemplo de uso similiar [AQUI](https://www.youtube.com/watch?v=EYexI_JikXU)
 
 ### Ejemplo 🔧👨‍💻
 
@@ -206,7 +216,9 @@ Suplantación de identidad y por lo tanto acceso no autorizado a recursos.
 
 ### Videos educacionales sobre la vulnerabilidad 🎥
 
-https://www.youtube.com/watch?v=fbZpsHMgNdk&t=402s
+▶️ Videos sobre Cookie Manipulation 🍪:
+
+Ejemplo básico sobre manipulación de Cookies muy parecido al que veremos nosotros, empezar a ver desde min 6:30 🕦 [AQUI](https://www.youtube.com/watch?v=fbZpsHMgNdk&t=402s) 
 
 ### Ejemplo 🔧👨‍💻
 
@@ -420,9 +432,19 @@ Como usar Hydra en Panel de LOGIN WEB [AQUÍ](https://www.youtube.com/watch?v=3q
 
 ### Descripción de la vulnerabilidad 💡🔍
 
+Es una vulnerabilidad de seguridad que permite a un atacante inyectar scripts maliciosos en una página web que es ejecutada por el navegador de un usuario. Esto ocurre cuando una aplicación web incluye datos proporcionados por el usuario en su respuesta sin una adecuada validación o escape.
+
 ### Riesgos asociados ⚠️💥
 
+Robo de datos, como cookies de sesión o información sensible del usuario, phising, redirección maliciosa, daño a la reputación.
+
 ### Videos educacionales sobre la vulnerabilidad 🎥
+
+▶️ Videos sobre hidden input/campo oculto manipulable:
+
+Qué es y como funciona **XSS Reclected❓** [AQUI](https://www.youtube.com/watch?v=whazLcsPcy0)
+
+Ejemplo básico parecido al que veremos nosotros [AQUÍ](https://www.youtube.com/watch?v=P3h2lr1D1N8)
 
 ### Ejemplo 🔧👨‍💻
 
@@ -437,6 +459,8 @@ Como usar Hydra en Panel de LOGIN WEB [AQUÍ](https://www.youtube.com/watch?v=3q
 
 ### Prevención 🔒🛡️
 
+Sanitizar y validar todas las entradas del usuario antes de ser procesadas o mostradas y implementar políticas que limiten los recursos que pueden ser cargados en la aplicación web.
+
 ### 14 - File Upload Injection 📤📄 
 
 ### Descripción de la vulnerabilidad 💡🔍
@@ -448,6 +472,10 @@ La capacidad de un atacante para cargar archivos maliciosos a un servidor a trav
 Ejecución de código malicioso, acceso no autorizado, filtración de datos, daño a la reputación.
 
 ### Videos educacionales sobre la vulnerabilidad 🎥
+
+▶️ Videos sobre como realizar **File Upload Injection** 📤📄:
+
+Ejemplo de uso buenísimo. No utilizaremos la herramienta Burpsuite pero nos sirve para entender como funciona. [AQUI](https://www.youtube.com/watch?v=B7L0epI7oYI)
 
 ### Ejemplo 🔧👨‍💻
 
