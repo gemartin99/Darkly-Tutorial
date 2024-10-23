@@ -1,6 +1,6 @@
 # Darkly 🕵️‍♂️🛡️
 
-Si tu idea es entrar a este repo para sacar las flags estas muy equivocado!
+Si tu idea es entrar a este repo para sacar las flags estas muy equivocado! La gracia de este repositorio es poder tener una guia en caso de ir muy perdido pero la idea principal es que intentes conseguir todo por ti mismo. Si buscas la solucion y no te rompes un poco la cabeza no aprenderas nada con los CTF's ya que en una maquina real no te daran nada hecho. 
 
 # Indice
 
