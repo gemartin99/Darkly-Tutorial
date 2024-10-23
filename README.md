@@ -248,6 +248,12 @@ Ejecución de código malicioso, robo de cookies, redirección a sitios malicios
 
 ### Videos educacionales sobre la vulnerabilidad 🎥
 
+▶️ Videos sobre como realizar ataques XSS 💬⚠️:
+
+Qué es XSS❓ **Explicado PASO a PASO** [AQUI](https://www.youtube.com/watch?v=_IO8Sm-tWPs)
+
+Demostración y **RIESGOS** de esta **VULNERABILIDAD** [AQUI](https://www.youtube.com/watch?v=lG2XpAgy0Ns)
+
 ### Ejemplo 🔧👨‍💻
 
    1. En la sección de ```Feedback```, observamos que al publicar un mensaje, este se refleja directamente en la página web. Lo que intentaremos hacer es enviar un script para comprobar si el input está mal sanitizado y si, en lugar de tratarlo como texto plano, el servidor lo ejecuta. En este caso particular, al ser un CTF, si el mensaje contiene la palabra ```script```, automáticamente obtenemos la flag, por lo que no es necesario un payload más complejo.
@@ -285,13 +291,19 @@ Utilizar técnicas como CAPTCHA, límites de tasa y protecciones basadas en IP.
 
 ### Descripción de la vulnerabilidad 💡🔍
 
-Ocurre cuando un atacante modifica o interfiere con los encabezados HTTP de una solicitud o respuesta
+Es una técnica en la que un atacante modifica los encabezados de las solicitudes HTTP para engañar a un servidor web. Esto puede permitir a los atacantes cambiar el comportamiento del servidor, como el manejo de sesiones, la autenticación y las redirecciones.
 
 ### Riesgos asociados ⚠️💥
 
-Falsificación de identidad y exposición de información sensible
+Ejecutar ataques de cross-site scripting (XSS), phishing, y la exposición de información sensible. Los atacantes pueden suplantar a usuarios legítimos, eludir controles de seguridad o redirigir tráfico a sitios maliciosos. 
 
 ### Videos educacionales sobre la vulnerabilidad 🎥
+
+▶️ Videos sobre como realizar ataques de HTTP Header Manipulation:
+
+Estos videos educativos son útiles para comprender el concepto general de HTTP Header Manipulation, pero no siempre representan un ejemplo exacto de cómo resolver nuestro ejercicio específico. En el video, se muestra la manipulación del encabezado **Host**, ya que en el entorno del autor, el servidor no valida adecuadamente ese campo. En nuestro caso, la vulnerabilidad radica en la falta de validación de los encabezados **User-Agent** y **Referer**, que son los que necesitamos explotar para lograr la flag.
+
+Explotando vulnerabilidades en la cabecera HTTP Host [AQUÍ](https://www.youtube.com/watch?v=A8hmKWQrp5Q)
 
 ### Ejemplo 🔧👨‍💻
 
@@ -353,6 +365,12 @@ Validación y sanitización de encabezados. Utilizar conexiones seguras HTTPS qu
 ### Riesgos asociados ⚠️💥
 
 ### Videos educacionales sobre la vulnerabilidad 🎥
+
+▶️ Videos sobre como realizar ataques de Fuerza Bruta con ```Hydra```🐍:
+
+Como utilizar Hydra paso a paso [AQUÍ](https://www.youtube.com/watch?v=rvme2kE8-jY)
+
+Como usar Hydra en Panel de LOGIN WEB [AQUÍ](https://www.youtube.com/watch?v=3qN-DmxpokM)
 
 ### Ejemplo 🔧👨‍💻
 
