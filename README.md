@@ -423,13 +423,25 @@ Validación y sanitización de encabezados. Utilizar conexiones seguras HTTPS qu
 
 ### Descripción de la vulnerabilidad 💡🔍
 
+La capacidad de un atacante para cargar archivos maliciosos a un servidor a través de un formulario de carga de archivos. Esta vulnerabilidad ocurre cuando una aplicación web no valida adecuadamente los archivos que los usuarios intentan cargar, lo que permite que se suban archivos que pueden ser utilizados para ejecutar código malicioso, obtener acceso no autorizado o comprometer la seguridad del servidor.
+
 ### Riesgos asociados ⚠️💥
+
+Ejecución de código malicioso, acceso no autorizado, filtración de datos, daño a la reputación.
 
 ### Videos educacionales sobre la vulnerabilidad 🎥
 
 ### Ejemplo 🔧👨‍💻
 
+Si nos vamos a la pestaña de Add image vemos que podemos subir un archivo.
+
+![image](https://github.com/user-attachments/assets/148e412c-9e37-43fd-8edc-efd642d2c242)
+
+Creamos un fichero malicioso, en este caso no hara nada pero la idea es crear un fichero con contenido malicioso en .php
+
 ![image](https://github.com/user-attachments/assets/c1e894b1-b97b-41f4-8cd9-dc2ed5536e41)
+
+Falseamos una peticion para que el servidor crea que esta recibiendo un fichero .jpeg cuando realmente estamos subiendo el fichero malicioso .php. La salida de este comando se hara en el fichero tmp.txt. Despues lo que haremos sera hacer cat al fichero y grep para buscar la flag.
 
 ![image](https://github.com/user-attachments/assets/9865b422-1d82-420e-b493-52d96b18fcd8)
 
@@ -437,9 +449,7 @@ Validación y sanitización de encabezados. Utilizar conexiones seguras HTTPS qu
 
 ### Prevención 🔒🛡️
 
-
-
-
+Implementar validaciones rigurosas para los archivos cargados. Esto incluye verificar la extensión del archivo, el tipo MIME y el contenido real del archivo para asegurarse de que es seguro.
 
 # Este tutorial ha llevado mucho trabajo, si crees que te ha sido útil agradeceria mucho starred 🌟 para que así se comparta y pueda ayudar a más estudiantes 👨🏻‍🎓❤️
 
